@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LuckySpinApp.Screens.Menu;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 namespace LuckySpinApp.Directors
 {
@@ -11,13 +13,34 @@ namespace LuckySpinApp.Directors
         {
             base.Start();
             AddExitAction<MenuScreen>(OnMenuScreenExit);
+            //AddExitAction<>();
+            //AddExitAction<>();
+            //AddExitAction<>();
+            SetCurrentScreen<MenuScreen>().Show();
         }
 
         void OnMenuScreenExit(string _exitCode)
         {
-            if (_exitCode == MenuScreen.Exit_Play)
+            switch (_exitCode)
             {
-                Application.Quit();
+                case MenuScreen.Exit_App:
+                    Application.Quit();
+                    break;
+                case MenuScreen.Exit_Start:
+                    //SceneManager.LoadScene();
+                    break;
+                case MenuScreen.Exit_Daily:
+                    //ToScreen<>();
+                    break;
+                case MenuScreen.Exit_Settings:
+                    //ToScreen<>();
+                    break;
+                case MenuScreen.Exit_Privacy:
+                    //ToScreen<>();
+                    break;
+                case MenuScreen.Exit_Rules:
+                    //ToScreen<>();
+                    break;
             }
         }
     }
