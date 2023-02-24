@@ -8,7 +8,7 @@ namespace LuckySpinApp.Screens.Menu
 {
     public class MenuScreen : BaseTemplateScreen
     {
-        public const string Exit_App = "Exit_Play";
+        public const string Exit_App = "Exit_App";
         public const string Exit_Start = "Exit_Start";
         public const string Exit_Daily = "Exit_Daily";
         public const string Exit_Settings = "Exit_Settings";

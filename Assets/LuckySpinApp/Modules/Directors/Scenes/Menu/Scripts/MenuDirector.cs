@@ -27,7 +27,7 @@ namespace LuckySpinApp.Directors
                     Application.Quit();
                     break;
                 case MenuScreen.Exit_Start:
-                    //SceneManager.LoadScene();
+                    SceneManager.LoadScene(SceneIds.Game);
                     break;
                 case MenuScreen.Exit_Daily:
                     //ToScreen<>();

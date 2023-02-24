@@ -7,5 +7,6 @@ namespace LuckySpinApp
     public static class SceneIds
     {
         public static readonly string Menu = "Menu";
+        public static readonly string Game = "Game";
     }
 }
