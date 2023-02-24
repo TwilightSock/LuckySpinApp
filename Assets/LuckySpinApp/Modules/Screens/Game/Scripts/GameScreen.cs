@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using LuckySpinApp.UIControllers;
 using LuckySpinApp.UIElements;
 using UnityEngine;
 
@@ -12,13 +13,13 @@ namespace LuckySpinApp.Screens
 
         [SerializeField] private ArrowUIE arrowElement;
         [SerializeField] private OutputUIE outputElement;
-        [SerializeField] private WheelUIE wheelElement;
-
+        [SerializeField] private GameUIC gameUIController;
         protected override void OnEnable()
         {
             base.OnEnable();
             
             arrowElement.OnArrowTrigger(outputElement.OutputItem);
+            gameUIController.OnMaxSpinsReached(OnBonusActivated);
         }
 
         public void OnExitPressed()
@@ -33,7 +34,7 @@ namespace LuckySpinApp.Screens
 
         public void OnSpinPressed()
         {
-            wheelElement.IsSpinning = true;
+            gameUIController.MakeSpin();
         }
         
         

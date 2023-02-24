@@ -15,6 +15,7 @@ namespace LuckySpinApp.Directors
             AddExitAction<BonusScreen>(OnBonusScreenExit);
             
             SetCurrentScreen<GameScreen>().Show();
+            //SetCurrentScreen<BonusScreen>().Show();
         }
         
         void OnGameScreenExit(string _exitCode)

@@ -10,10 +10,11 @@ namespace LuckySpinApp.UIElements
         [SerializeField] private float wheelSpeed;
         private Vector3 currentEulerAngles;
         private float currentSpeed;
-       
+        private int counter;
         private void Start()
         {
             Speed = wheelSpeed;
+            counter = 0;
         }
 
         public void Spin()
@@ -41,6 +42,7 @@ namespace LuckySpinApp.UIElements
             {
                 IsSpinning = false;
                 Speed = wheelSpeed;
+                counter++;
             }
         }
 
@@ -60,5 +62,9 @@ namespace LuckySpinApp.UIElements
         }
 
         public bool IsSpinning { get; set; }
+        public int CountSpins
+        {
+            get => counter;
+        }
     }
 }
